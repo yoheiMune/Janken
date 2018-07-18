@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nCi-jV-Ttv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqY-im-1rL">
+                                <rect key="frame" x="137.5" y="315.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ij6-3s-DcE"/>
+                                    <constraint firstAttribute="height" constant="100" id="qGJ-wy-7Zj"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="choki"/>
+                                <connections>
+                                    <action selector="onTapChoki" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dT-Cs-naM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-9P-aqq">
+                                <rect key="frame" x="137" y="465.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gTM-u1-7S2"/>
+                                    <constraint firstAttribute="width" constant="100" id="qxq-Mz-rN2"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pa"/>
+                                <connections>
+                                    <action selector="onTapPa" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4B-xh-c38"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-DM-gDJ">
+                                <rect key="frame" x="137" y="165.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="NoT-09-5m3"/>
+                                    <constraint firstAttribute="height" constant="100" id="s9G-qc-Teu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Button" image="gu"/>
+                                <connections>
+                                    <action selector="onTapGu" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbx-mi-zag"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GqY-im-1rL" firstAttribute="top" secondItem="rW7-DM-gDJ" secondAttribute="bottom" constant="50" id="FHN-R7-2Nr"/>
+                            <constraint firstItem="s9W-9P-aqq" firstAttribute="top" secondItem="GqY-im-1rL" secondAttribute="bottom" constant="50" id="V9T-my-fSx"/>
+                            <constraint firstItem="GqY-im-1rL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zfc-zd-owz"/>
+                            <constraint firstItem="GqY-im-1rL" firstAttribute="centerX" secondItem="rW7-DM-gDJ" secondAttribute="centerX" id="bFw-GR-Nyt"/>
+                            <constraint firstItem="GqY-im-1rL" firstAttribute="centerX" secondItem="s9W-9P-aqq" secondAttribute="centerX" id="ezy-LE-mAk"/>
+                            <constraint firstItem="GqY-im-1rL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iaN-cn-w7y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jL1-UF-eSw"/>
+                    <connections>
+                        <segue destination="s5j-x2-BIB" kind="show" identifier="result" id="Xtk-US-E0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-385"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="WlY-gg-ntd">
+            <objects>
+                <viewController id="s5j-x2-BIB" customClass="ResultViewController" customModule="Janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Es-NC-Jwo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝ち" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUe-J0-ltQ">
+                                <rect key="frame" x="155" y="94" width="65" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="com-gu" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-7v-yh3">
+                                <rect key="frame" x="62" y="327" width="250" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="IW0-jA-kIt"/>
+                                    <constraint firstAttribute="height" constant="330" id="wld-Km-kkf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMの手" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR4-d6-xPg">
+                                <rect key="frame" x="144" y="303" width="87" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E8u-7v-yh3" firstAttribute="top" secondItem="QR4-d6-xPg" secondAttribute="bottom" id="0z1-3Z-gXd"/>
+                            <constraint firstItem="mUe-J0-ltQ" firstAttribute="top" secondItem="n2i-1E-fL2" secondAttribute="top" constant="30" id="5n8-cb-wyf"/>
+                            <constraint firstItem="QR4-d6-xPg" firstAttribute="centerX" secondItem="n2i-1E-fL2" secondAttribute="centerX" id="7gy-9n-W5S"/>
+                            <constraint firstItem="n2i-1E-fL2" firstAttribute="bottom" secondItem="E8u-7v-yh3" secondAttribute="bottom" constant="10" id="FM4-0V-Pmd"/>
+                            <constraint firstItem="mUe-J0-ltQ" firstAttribute="centerX" secondItem="n2i-1E-fL2" secondAttribute="centerX" id="P8I-LS-c4Q"/>
+                            <constraint firstItem="E8u-7v-yh3" firstAttribute="centerX" secondItem="n2i-1E-fL2" secondAttribute="centerX" id="cRm-SW-TFq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n2i-1E-fL2"/>
+                    </view>
+                    <connections>
+                        <outlet property="comImageView" destination="E8u-7v-yh3" id="POk-E9-Bqq"/>
+                        <outlet property="resultLabel" destination="mUe-J0-ltQ" id="20k-Ma-oTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXC-Kx-8Rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="-385"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3ez-dN-SZG">
+            <objects>
+                <navigationController id="nCi-jV-Ttv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NqD-OE-Fvf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oeG-Kf-6YU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmY-Wy-5ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="-385"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="choki" width="225" height="225"/>
+        <image name="com-gu" width="500" height="660"/>
+        <image name="gu" width="225" height="225"/>
+        <image name="pa" width="225" height="225"/>
+    </resources>
+</document>
